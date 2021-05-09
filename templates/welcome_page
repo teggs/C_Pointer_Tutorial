@@ -1,0 +1,26 @@
+{% extends 'indexx.html' %}
+{% block content %}
+    <table class = "register" style = "table-layout:fixed;width:100%">
+        <tr>
+            <td align="center">
+                <a href=signup>
+                    <button type="button" style ="width: 50%;height:200px;margin-top:100px;font-size:50px;margin-bottom:100px" class="sign btn btn-primary btn-lg btn-info" name = "signup" value="signup">Sign up</button>
+                </a>
+            </td>
+            <td align ="center">
+                <a href=login>
+                    <button type="button" style = "width: 50%;height:200px;margin-top:100px;font-size:50px;margin-bottom:100px" class="sign btn btn-primary btn-lg btn-info" name = "login" value="login">Log in</button>
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+    <table class = "register" style = "table-layout:fixed;width:100%">
+        <tr>
+            <td >
+                <img src="../../static/pointers.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;" alt="fstbk">
+            </td>
+        </tr>
+    </table>
+{% endblock %}
