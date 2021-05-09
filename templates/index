@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <title>{{ title }}</title>
+
+        <meta name = "viewpoint" content = "width=device-width, initial-scale=1.0">
+
+        <!-- Boostrap CDN-->
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!--css file-->
+        <link rel = "stylesheet" type = "text/css" href = {{url_for('static', filename='style.css')}}>
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    </head>
+
+    <body>
+        <h3 style="color: blue">Flask app</h3>
+        <div class="container" style ="text-align:center;font-size:50px;font-weight:bold">
+            Test your C pointer knowledge!
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        {% block signup %}
+        {% endblock %}
+
+        {% block login %}
+        {% endblock %}
+
+    </body>
+</html>
