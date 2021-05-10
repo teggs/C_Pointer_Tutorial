@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Pointer Exercise</title>
+    <script src = answer_sheet.js></script>
+    <link rel = "stylesheet" href = "answer_sheet.css">
+</head>
+
+<body style = "background-color:#FAF9DE;">
+    <div class = "title">
+        <h2>C Pointer Online Exercise</h2><br>
+        <script>document.write(notice)</script>
+    </div>
+
+    <div class = "exercise" id = "showtext">
+    </div>
+
+    <div class = "clickArea">
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "c1" onclick = "makeChoice(this.id)"></div>
+        </div> 
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "c2" onclick = "makeChoice(this.id)"></div>
+        </div> 
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "c3" onclick = "makeChoice(this.id)"></div>
+        </div> 
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "c4" onclick = "makeChoice(this.id)"></div>
+        </div> 
+    </div>
+
+    <div class = "choiceArea" id = "showchoice">
+    </div>
+    <div class = "controlArea">
+        <button id = 'next' onclick = 'loadExercise(this.id)'>next</button>
+        <button id = 'previous' onclick = 'loadExercise(this.id)'>previous</button>
+    </div>
+
+    <div class = "hint">
+        <h2>C Pointer Online Exercise</h2><br>
+        <script>document.write(notice)</script>
+    </div>
+</body>
