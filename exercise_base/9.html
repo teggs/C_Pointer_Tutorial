@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Pointer Exercise</title>
+    <link rel = "stylesheet" href = "exercise_base/exercise.css">
+</head>
+<body>
+<br>
+<label>What is the output of the following program?</label>
+<br>
+<p>
+#include&lt;stdio.h&gt;<br>
+<br>
+void swap(int a, int b)<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int temp = a;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a = b;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a = temp;<br>
+}<br>
+<br>
+int main()<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int a = 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int b = 2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;swap(a, b);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("a = %d,  ", a);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("b = %d,  ", b);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+</p>
+</body>
+

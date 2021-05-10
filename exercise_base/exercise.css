@@ -1,0 +1,18 @@
+p{
+    margin-left: 10px;
+    font-size: 18px;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+label
+{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.choiceContent{
+    position: relative;
+    top: 20px;
+    left: 0px;
+    width: 80%;
+    height: 30px; 
+}
