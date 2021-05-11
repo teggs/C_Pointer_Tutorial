@@ -49,51 +49,21 @@ function OnNext() {
   }
   else
   {
-  if (number == 9)
-  {
-    document.getElementById("next").innerHTML = "finish";
-  }
-  //keep user's choice
-  RecordChoice(number-1);
-  //console.log(recordList.toString());
-  SetChoice(recordList[number]);
-  //disable button if the user have not answer this question
-  if (recordList[number] <0)
-  {
-    document.getElementById("next").disabled = true;
-  }
-  //update process
-  var notice = (number+1) + '/10' + '&nbsp;&nbsp;&nbsp;&nbsp;' + diffList[number];
-  document.getElementById("noticeArea").innerHTML = notice;
-  //update exercise
-  var xhttp1 = new XMLHttpRequest();
-  xhttp1.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("showtext").innerHTML = this.responseText;
+    if (number == 9)
+    {
+      document.getElementById("next").innerHTML = "finish";
     }
-  };
-  var filePath = "exercise_base/"+exNumberList[number]+".html";
-  xhttp1.open("GET", filePath, true);
-  xhttp1.send();
-  //update choice
-  var xhttp2 = new XMLHttpRequest();
-  xhttp2.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       document.getElementById("showchoice").innerHTML = this.responseText;
-      }
-    };
-  var filePath2 = "exercise_base/"+exNumberList[number]+"c.html";
-  xhttp2.open("GET", filePath2, true);
-  xhttp2.send();
-
-  //enable the 'previous' button
-  document.getElementById("previous").disabled = false;
-  }
-
-  function OnPre() {
-    number--;
-    //find user's history choice and mark it
+    //reset the hint area
+    hintFlag = 1;
+    loadHint();
+    //keep user's choice
+    RecordChoice(number-1);
     SetChoice(recordList[number]);
+    //disable button if the user have not answer this question
+    if (recordList[number] <0)
+    {
+      document.getElementById("next").disabled = true;
+    }
     //update process
     var notice = (number+1) + '/10' + '&nbsp;&nbsp;&nbsp;&nbsp;' + diffList[number];
     document.getElementById("noticeArea").innerHTML = notice;
@@ -111,23 +81,60 @@ function OnNext() {
     var xhttp2 = new XMLHttpRequest();
     xhttp2.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-         document.getElementById("showchoice").innerHTML = this.responseText;
+        document.getElementById("showchoice").innerHTML = this.responseText;
         }
       };
     var filePath2 = "exercise_base/"+exNumberList[number]+"c.html";
     xhttp2.open("GET", filePath2, true);
     xhttp2.send();
 
-    //enable the 'next' button
-    document.getElementById("next").disabled = false;
-    document.getElementById("next").innerHTML = "next";
-    //disable button if reaching the first exercise
-    if(number == 0)
-    {
-      document.getElementById("previous").disabled = true;
-    }
+    //enable the 'previous' button
+    document.getElementById("previous").disabled = false;
     }
   }
+
+function OnPre() {
+  number--;
+  //reset the hint area
+  hintFlag = 1;
+  loadHint();
+  //find user's history choice and mark it
+  SetChoice(recordList[number]);
+  //update process
+  var notice = (number+1) + '/10' + '&nbsp;&nbsp;&nbsp;&nbsp;' + diffList[number];
+  document.getElementById("noticeArea").innerHTML = notice;
+  //update exercise
+  var xhttp1 = new XMLHttpRequest();
+  xhttp1.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200)
+    {
+      document.getElementById("showtext").innerHTML = this.responseText;
+    }
+  };
+  var filePath = "exercise_base/"+exNumberList[number]+".html";
+  xhttp1.open("GET", filePath, true);
+  xhttp1.send();
+  //update choice
+  var xhttp2 = new XMLHttpRequest();
+  xhttp2.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("showchoice").innerHTML = this.responseText;
+    }
+  };
+  var filePath2 = "exercise_base/"+exNumberList[number]+"c.html";
+  xhttp2.open("GET", filePath2, true);
+  xhttp2.send();
+
+  //enable the 'next' button
+  document.getElementById("next").disabled = false;
+  document.getElementById("next").innerHTML = "next";
+  //disable button if reaching the first exercise
+  if(number == 0)
+  {
+    document.getElementById("previous").disabled = true;
+  }
+}
+
 
  function RecordChoice(n)
   { 
@@ -219,7 +226,7 @@ function OnNext() {
         document.getElementById("hint").innerHTML = this.responseText;
         }
       };
-      var filePath = "exercise_base/"+exNumberList[number]+"c.html";
+      var filePath = "exercise_base/"+exNumberList[number]+"h.html";
       xhttp.open("GET", filePath, true);
       xhttp.send();
     }
