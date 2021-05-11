@@ -62,29 +62,35 @@
     height: 100px;
 }
 
-.hint{
+.hintArea{
     text-align: left;
-    background: #e6e8eb;
+    background: #d3f4fa;
     position: absolute;
-    top: 170px;
+    top: 120px;
     left: 65%;
     width: 30%;
-    height: 500px;
+    height: 550px;
 }
 
 button {
     background-color: #2f9ef8;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 10px;
+    width: 120px;
 }
 
 button:hover{
     background: #13b2c7;
     transition: .5s;
 }
+
+button:disabled {
+    color: #3d3535;
+    background: #808080;
+  }
