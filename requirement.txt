@@ -1,7 +1,0 @@
-flask
-flask-boostrap
-flask-sqlalchemy
-flask-wtf
-wtforms
-flask-login
-selenium
