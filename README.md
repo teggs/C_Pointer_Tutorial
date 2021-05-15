@@ -17,7 +17,7 @@
   "kill -9 $PortID".<br>
   Or, another method is to set the port and the host for the flask app.<br>
   
-   <h3>Using selenium to test the app /h3>
+   <h3>Using selenium to test the app </h3>
    <p>In the app fold, use python IDE to open the test2.py, set the host and the local variable before running the test, and the default host is "127.0.0.1", the default port is 5000.<br>
    In addition, the selenium testing code is written for the chrome web driver. Please put the web driver into the root directory, and ensure the version of the web driver is matching your chrome web application</p>
   
