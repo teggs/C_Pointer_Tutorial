@@ -20,6 +20,14 @@
   After successful register, then input the user name and the password to login to the app. If you forget the password or the username, please register again.
   
   <h3>The study platform</h3>
+  After sucessessing log into the app, there are 3 choice. The introduction of the C pointer part tell the motivation of the app establish. The teaching part includes several videos, becasue the video tutor has a good knowledge of the C-pointers. and an assess part helps user to check the progress of the learning.
+  
+  <h3>The design of the assessment</h3>
+  
+  
+  <h3> The assessment result</h3>
+ After finish the testing, the app return an comment of users performance. The bar plot evalue the user's performace and compare with the other users' performance.
+ The natural language template assist the user undertanding the bar plot and the understanding level of the C pointer.
   
   
   
