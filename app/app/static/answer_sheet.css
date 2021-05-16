@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.title{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-color: #01213a;
+}
+
+.exercise{
+    text-align: left;
+    background: #d3f4fa;
+    position: absolute;
+    top: 120px;
+    left: 10%;
+    width: 30%;
+    height: 550px;
+}
+
+.clickArea{
+    text-align: left;
+    background: #d3f4fa;
+    position: absolute;
+    top: 120px;
+    left: 40%;
+    width: 4%;
+    height: 450px;
+    margin-left: 0%;
+}
+
+.tp{
+    text-align: center;
+    font-size: xx-large;
+    color: #FFFFFF;
+    line-height: 100px;
+}
+
+.show{
+    position: absolute;
+    width: 100%;
+    top: 75px;
+    color: #8cf57e;
+}
+
+.clickBox{
+    position: relative;
+    top: 44px;
+    left: 30px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 34px;
+}
+
+.chosen{ 
+    position: relative;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%
+}
+
+.choiceArea{
+    text-align: left;
+    background: #d3f4fa;
+    position: absolute;
+    top: 120px;
+    left: 44%;
+    width: 16%;
+    height: 400px;
+    
+}
+
+.controlArea{
+    text-align: left;
+    background: #d3f4fa;
+    position: absolute;
+    top: 520px;
+    left: 40%;
+    width: 20%;
+    height: 150px;
+}
+
+.hintArea{
+    text-align: left;
+    background: #d3f4fa;
+    position: absolute;
+    top: 120px;
+    left: 65%;
+    width: 30%;
+    height: 550px;
+}
+
+button {
+    background-color: #2f9ef8;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+button:hover{
+    background: #13b2c7;
+    transition: .5s;
+}
+
+button:disabled {
+    color: #3d3535;
+    background: #808080;
+  }
+
+  /*ajax*/
+p{
+    margin-left: 10px;
+    font-size: 18px;
+    font-family:Arial,Helvetica,sans-serif;
+}
+label
+{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.choiceContent{
+    position: relative;
+    top: 40px;
+    left: 0px;
+    width: 80%;
+    height: 30px; 
+    margin-bottom: 20px;
+}
