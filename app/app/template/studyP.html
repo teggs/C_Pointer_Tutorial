@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block studyP %}
+    <h1>Hello, {{ current_user.username }}</h1>
+    &nbsp
+    <table style = "table-layout:fixed;text-align: center;width:100%;">
+        <tr>
+            <td style="padding:20px"><img src="static/learning_img.jpg" style = "width:200px;height:200px" alt="Italian Trulli">
+            </td>
+            <td ><img src="static/question.jpg" style = "width:200px;height:200px" alt="Italian Trulli">
+            </td>
+            <td ><img src="static/hugface.jpg" style = "width:200px;height:200px" alt="Italian Trulli">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id = "learning" type="button" class="btn btn-warning"><a href ="login/learning">Learning</a></button>
+            </td>
+            <td>
+                <button id = "promoting" type="button" class="btn btn-warning"><a href ="login/introduction">Why is necessary to know C pointer?</a></button>
+            </td>
+            <td>
+                <button id = 'assessing' type="button" class="btn btn-warning"><a href ="login/assessing">Assessing</a></button>
+            </td>
+        </tr>
+    </table>
+
+
+{% endblock %}
+
+

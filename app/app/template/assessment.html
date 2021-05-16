@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>Pointer Exercise</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Difficulty','Total', 'Right',"Average"],
+          ['Easy', 5, {{ e_right }},{{ avg_easy_mark }}],
+          ['Medium', 3, {{ m_right }},{{ avg_medium_mark }}],
+          ['Hard', 2, {{ h_right }},{{ avg_hard_mark }}]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Your Accessment',
+            subtitle: 'total questions VS doing right',
+          },
+          'chartArea':{
+            'backgroundColor': "#FAF9DE"
+          },
+          backgroundColor: "#FAF9DE"
+        };
+
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+    </script>
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='accessing_sheet.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+
+<body style="background-color:#FAF9DE;">
+  <div class = 'title'>
+    <label>Results Accessment</label>
+  </div>
+  <div class = 'resultArea' id="columnchart_material" style="width: 500px; height: 500px;"></div>
+  <div class = 'commentArea'>
+    <table>
+        <tr><td><div><p>Your total accurate rate is <b>{{ accuracy_rate }}%</b>, which looks <b>{{ adj1 }}</b>.</p></div></td></tr>
+
+    <tr><td><div><p>Among the easy questions, <b>{{ e_right }}</b> is correct. You have a <b>{{ adj2 }}</b> understanding of pointer conception.
+    <br> And the average score among total users is <b>{{ avg_easy_mark }}</b>.</p></div></td></tr>
+
+    <tr><td><div><p>Among the medium questions, <b>{{ m_right }}</b> is correct. Your performance is  <b>{{ adj3 }}</b>.
+        <br> And the average score among total users is <b>{{ avg_medium_mark }}</b>.
+        <br> To make progress, you might learn to combine pointer with other conceptions.</p></div></td></tr>
+
+    <tr><td><div><p>Among the hard questions, <b>{{ h_right }}</b> is correct. Your performance is  <b>{{ adj4 }}</b>.
+        <br> And the average score among total users is <b>{{ avg_hard_mark }}</b>.
+        <br> To make progress, you might learn the function of heap first.</p></div></td></tr>
+    <tr>
+      <td><button id = 'back' style = "float:right" class="btn btn-outline-warning"><a href = "/login">OK</a></button></td>
+    </tr>
+  </table>
+  </div>
+</body>
+</html>

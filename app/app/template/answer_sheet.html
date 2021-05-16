@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Pointer Exercise</title>
+    <script type = text/javascript src= {{ url_for ('static', filename='answer_sheet.js') }}></script>
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='answer_sheet.css')}}">
+</head>
+
+<body style = "background-color:#FAF9DE;">
+    <div class = "title" id = "top">
+        <p class = 'tp'>C Pointer Online Exercise</p><br>
+        <div class = 'show' id= "noticeArea">
+        </div>
+    </div>
+
+    <div class = "exercise" id = "showtext">
+    </div>
+
+    <div class = "clickArea">
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "A" onclick = "makeChoice(this.id)"></div>
+        </div> 
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "B" onclick = "makeChoice(this.id)"></div>
+        </div> 
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "C" onclick = "makeChoice(this.id)"></div>
+        </div> 
+        <div class="clickBox">
+            <div style="background-color:#FFFFFF;" class = "chosen" id = "D" onclick = "makeChoice(this.id)"></div>
+        </div> 
+    </div>
+
+    <div class = "choiceArea" id = "showchoice">
+    </div>
+    <div class = "controlArea">
+        <table>
+        <tr>
+        <td><button id = 'next' onclick = 'OnNext()' disabled = 'true'>Next</button></td>
+        <td><button id = 'previous' onclick = 'OnPre()' disabled = 'true'>Previous</button></td>
+        </tr>
+        <tr>
+        <td colspan="2">
+        <form method="post">
+            <table>
+            <tr>
+            <td><button id ='exit' name = 'action' type="submit" value = 'return' onclick = 'OnSubmit()'>Return</button></td>
+            <td><button id = 'submit' name = 'action' type = 'submit' value = "submit" onclick = 'OnSubmit()' disabled = 'true'>Submit</button></td>
+            </tr>
+            </table>
+            <input hidden id = 'user_answer' type = 'text' name="user_answer" value ='{{ request.form.user_answer }}'>
+            <input hidden id = 'q_index' type = 'text' name="q_index" value ='{{ request.form.q_index }}'>
+        </form></td>
+        </tr>
+        </table>
+    </div>
+
+    <div class = "hintArea">
+        <button id = 'hintbtn' onclick = "loadHint()">Show Hint</button>
+        <div id = "hint">
+        <p>Have no ideal? Click button to get hints!</p>
+        </div>
+    </div>
+
+    <div style = 'display: none;' id = 'answer'>{{ user_answer }}</div>
+    <div style = 'display: none;' id = 'index'>{{ question_index }}</div>
+    <div style = 'display: none;' id = 'flag'>{{ flag }}</div>  
+</body>

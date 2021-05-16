@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block signup %}
+
+    <br>
+    <table style = "margin-top:30px;margin-left:100px;width:50%;">
+        <tr>
+            <td>
+                <h1>Register now</h1>
+            </td>
+        </tr>
+        <tr>
+            <td style = "font-size: 20px">
+            {% import 'bootstrap/wtf.html' as wtf %}
+            {{form.csrf_token}}
+            {{ wtf.quick_form(form) }}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
