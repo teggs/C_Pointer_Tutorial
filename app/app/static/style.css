@@ -1,0 +1,31 @@
+body {
+    background-color: #c9fff6;
+}
+
+/*navagate bar same in each page*/
+#nav_bar{
+  background-color:black;
+  border: 15px solid transparent;
+  padding:15px 15px;
+}
+
+.topnav a{
+  font-style: italic;
+  font-size: x-large;
+  text-decoration: None;
+  color: white;
+}
+
+.topnav :hover{
+  color:grey;         /* if hover, the topnav grey*/
+}
+li.topnav :hover :not(#active){
+  color: white;       /* the hover not work for current page nav*/
+}
+
+#active {
+  color:#FF8C00;      /*in current page, nav color is orange*/
+}
+
+
+
