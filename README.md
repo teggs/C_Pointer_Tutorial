@@ -6,13 +6,10 @@ Or, another method is to set the port and the host for the flask app.
 
 Using selenium to test the app
 In the app fold, use python IDE to open the test2.py, set the host and the local variable before running the test, and the default host is "127.0.0.1", the default port is 5000.
-In addition, the selenium testing code is written for the chrome web driver. Please put the web driver into the root directory, and ensure the version of the web driver is matching 
-your chrome web application
+In addition, the selenium testing code is written for the chrome web driver. Please put the web driver into the root directory, and ensure the version of the web driver is matching your chrome web application
 
 Reigseter and login to the C pointer tutorial flask app （the registration/login page）
-In the login page, input a username, an email address, a password and a confirmed password. The flask wtf form validator will check the input format. Please input the valid information, 
-or the validator will reject the user registration request. After successful register, then input the user name and the password to login to the app. If you forget the password or the 
-username, please register again.
+In the login page, input a username, an email address, a password and a confirmed password. The flask wtf form validator will check the input format. Please input the valid information, or the validator will reject the user registration request. After successful register, then input the user name and the password to login to the app. If you forget the password or the username, please register again.
 
 The study platform
 After success in login into the app, there are three options. 
